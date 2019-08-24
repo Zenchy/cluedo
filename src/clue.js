@@ -94,7 +94,17 @@ room15 = {name: 'Patio'}
 const charactersArray = [ mrGreen, drOrchid, profPlum, missScarlet, mrsPeacock, mrMustard];
 
 // Rooms Collection
-const roomsArray = [room1,room2, room3, room4, room5, room6, room7, room8, room9, room10, room11, room12, room13, room14, room15 ];
+const roomsArray = [room1, room2, room3, room4, room5, room6, room7, room8, room9, room10, room11, room12, room13, room14, room15 ];
 
 // Weapons Collection
 const weaponsArray = [weapon1, weapon2, weapon3, weapon4, weapon5, weapon6, weapon7, weapon8, weapon9 ];
+
+function randomSelector(arrayToChoose){
+  const elementIndex = Math.floor(Math.random()*arrayToChoose.length)
+  return arrayToChoose ? arrayToChoose[elementIndex]:undefined
+}
+
+function pickMystery(){
+ return {suspect:randomSelector(charactersArray), weapon:randomSelector(weaponsArray), room:randomSelector(roomsArray)}
+}
+ 
