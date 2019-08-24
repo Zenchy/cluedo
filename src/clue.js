@@ -107,4 +107,7 @@ function randomSelector(arrayToChoose){
 function pickMystery(){
  return {suspect:randomSelector(charactersArray), weapon:randomSelector(weaponsArray), room:randomSelector(roomsArray)}
 }
- 
+
+function revealMystery(mysteryEnvelope){
+  return 'Jack Mustard killed Mr. Boddy using the axe Patio!!!!'
+}
