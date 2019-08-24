@@ -105,9 +105,10 @@ function randomSelector(arrayToChoose){
 }
 
 function pickMystery(){
- return {suspect:randomSelector(charactersArray), weapon:randomSelector(weaponsArray), room:randomSelector(roomsArray)}
+  const mysteryEnvelope = {suspect:randomSelector(charactersArray), weapon:randomSelector(weaponsArray), room:randomSelector(roomsArray)}
+ return mysteryEnvelope
 }
 
 function revealMystery(mysteryEnvelope){
-  return 'Jack Mustard killed Mr. Boddy using the axe Patio!!!!'
+  return `${mysteryEnvelope.suspect.first_name} ${mysteryEnvelope.suspect.last_name} killed Mr. Boddy using the ${mysteryEnvelope.weapon.name} in the ${mysteryEnvelope.room.name}!!!!`
 }
